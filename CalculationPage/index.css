@@ -1,0 +1,276 @@
+:root {
+  color-scheme: light;
+  --blue: #1677c8;
+  --blue-dark: #105f9f;
+  --blue-light: #eaf5ff;
+  --ink: #1d2b3a;
+  --muted: #647789;
+  --border: #d7e5f0;
+  --surface: #ffffff;
+  --page: #f3f8fc;
+  --error: #b42318;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 50% 0, #e1f1ff 0, transparent 48rem),
+    var(--page);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: var(--blue-dark);
+}
+
+.container {
+  width: min(100% - 40px, 1040px);
+  margin-inline: auto;
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.navigation {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  color: var(--ink);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-link {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  min-height: calc(100vh - 73px);
+  place-items: center;
+  padding-block: 48px;
+}
+
+.calculator-card {
+  width: min(100%, 560px);
+  padding: clamp(24px, 5vw, 44px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgb(34 83 120 / 10%);
+}
+
+.intro {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 6vw, 2.5rem);
+}
+
+.intro > p:last-child {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.field {
+  margin-top: 20px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.field label span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.field input {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid #b9ccdc;
+  border-radius: 9px;
+  font: inherit;
+}
+
+.field input:focus {
+  border-color: var(--blue);
+  outline: 3px solid rgb(22 119 200 / 16%);
+}
+
+.field input[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+.field-error,
+.form-error {
+  min-height: 0;
+  margin: 6px 0 0;
+  color: var(--error);
+  font-size: 0.9rem;
+}
+
+.field-error:not(:empty),
+.form-error:not(:empty) {
+  min-height: 1.25em;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.button {
+  min-height: 48px;
+  padding: 11px 20px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgb(22 119 200 / 35%);
+  outline-offset: 3px;
+}
+
+.button-primary {
+  flex: 1;
+  color: var(--surface);
+  background: var(--blue);
+}
+
+.button-primary:hover {
+  background: var(--blue-dark);
+}
+
+.button-secondary {
+  color: var(--blue-dark);
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.button-secondary:hover {
+  background: var(--blue-light);
+  border-color: #b9d8f0;
+}
+
+.result {
+  margin-top: 28px;
+  padding: 22px;
+  background: var(--blue-light);
+  border: 1px solid #c9e4fa;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.result[hidden] {
+  display: none;
+}
+
+.result-label {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.bmi-value {
+  margin: 6px 0;
+  color: var(--blue-dark);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.result h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+#result-message {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.disclaimer {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 28px, 1040px);
+  }
+
+  .navigation {
+    min-height: 64px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    text-align: right;
+  }
+
+  main {
+    min-height: calc(100vh - 65px);
+    padding-block: 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
