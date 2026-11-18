@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn what BMI means, review BMI categories, and explore general healthy lifestyle tips.">
+    <title>Understanding BMI | BMI Guide</title>
+    <link rel="stylesheet" href="info.css">
+    <script src="info.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navigation" aria-label="Main navigation">
+            <a class="brand" href="../CalculationPage/index.html" aria-label="BMI Guide home">
+                <span class="brand-mark" aria-hidden="true">B</span>
+                <span>BMI Guide</span>
+            </a>
+            <a class="nav-link" href="../CalculationPage/index.html">BMI Calculator <span aria-hidden="true">→</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">A simple guide to understanding BMI</p>
+                <h1>Know your numbers.<br><span>Understand your health.</span></h1>
+                <p class="hero-description">
+                    Learn what Body Mass Index can tell you, how its ranges are grouped, and why it is just one part of the bigger picture.
+                </p>
+                <a class="button button-primary" href="#bmi-categories">Explore BMI categories <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-illustration" aria-hidden="true">
+                <div class="illustration-circle">
+                    <span class="illustration-number">BMI</span>
+                    <span class="illustration-caption">A starting point,<br>not the whole story</span>
+                    <span class="illustration-spark spark-one">✦</span>
+                    <span class="illustration-spark spark-two">✦</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-section content-section" aria-labelledby="what-is-bmi">
+            <div class="section-heading">
+                <p class="eyebrow">The basics</p>
+                <h2 id="what-is-bmi">What does BMI mean?</h2>
+            </div>
+            <div class="intro-grid">
+                <p class="intro-copy">
+                    Body Mass Index (BMI) is a number calculated from a person's weight and height. It is commonly used as a screening measure to group weight ranges for adults.
+                </p>
+                <div class="formula-card">
+                    <span class="formula-label">The formula</span>
+                    <p class="formula">BMI = <span>weight (kg)</span> ÷ <span>height (m)²</span></p>
+                    <p class="formula-note">Height is measured in metres and squared.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="importance-section content-section" aria-labelledby="why-bmi">
+            <div class="importance-card">
+                <div>
+                    <p class="eyebrow">Putting it in context</p>
+                    <h2 id="why-bmi">Why is BMI important?</h2>
+                    <p class="section-copy">
+                        BMI can offer a quick, consistent way to start a conversation about weight-related health risks.
+                    </p>
+                </div>
+                <div class="importance-action">
+                    <button class="button button-secondary" id="importance-button" type="button" aria-expanded="false" aria-controls="importance-details">
+                        Why it can be useful <span class="button-icon" aria-hidden="true">＋</span>
+                    </button>
+                    <p class="interactive-details" id="importance-details" hidden>
+                        A healthcare professional may use BMI alongside other information to decide whether more assessment or support could be helpful. It is a screening tool, not a diagnosis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section content-section" id="bmi-categories" aria-labelledby="categories-title">
+            <div class="section-heading">
+                <p class="eyebrow">Adult BMI ranges</p>
+                <h2 id="categories-title">BMI categories</h2>
+                <p class="section-copy">These commonly used ranges are for adults. They may not apply to everyone.</p>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">BMI range</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">What it may indicate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Below 18.5</td>
+                            <td><span class="category-label category-light">Underweight</span></td>
+                            <td>Below the usual reference range</td>
+                        </tr>
+                        <tr>
+                            <td>18.5–24.9</td>
+                            <td><span class="category-label category-healthy">Normal weight</span></td>
+                            <td>Within the usual reference range</td>
+                        </tr>
+                        <tr>
+                            <td>25.0–29.9</td>
+                            <td><span class="category-label category-high">Overweight</span></td>
+                            <td>Above the usual reference range</td>
+                        </tr>
+                        <tr>
+                            <td>30.0 and above</td>
+                            <td><span class="category-label category-highest">Obesity</span></td>
+                            <td>Well above the usual reference range</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">BMI ranges are a general guide. Individual health depends on more than a single number.</p>
+        </section>
+
+        <section class="tips-section content-section" aria-labelledby="tips-title">
+            <div class="section-heading">
+                <p class="eyebrow">Everyday wellbeing</p>
+                <h2 id="tips-title">Small habits, lasting benefits</h2>
+                <p class="section-copy">General ideas to support wellbeing. Choose what is realistic and suitable for you.</p>
+            </div>
+            <div class="tips-grid">
+                <article class="tip-card">
+                    <span class="tip-icon icon-food" aria-hidden="true">01</span>
+                    <h3>Build balanced meals</h3>
+                    <p>Include a variety of vegetables and fruit, whole grains, and protein-rich foods. Enjoy a range of foods that suit your needs and preferences.</p>
+                </article>
+                <article class="tip-card">
+                    <span class="tip-icon icon-move" aria-hidden="true">02</span>
+                    <h3>Move in ways you enjoy</h3>
+                    <p>Walking, dancing, cycling, or other activities can all count. Start at a comfortable pace and build movement into your routine when you can.</p>
+                </article>
+                <article class="tip-card">
+                    <span class="tip-icon icon-water" aria-hidden="true">03</span>
+                    <h3>Stay hydrated</h3>
+                    <p>Drink fluids regularly through the day. Your needs can vary with activity, weather, and health, so follow any advice from your care team.</p>
+                </article>
+                <article class="tip-card">
+                    <span class="tip-icon icon-sleep" aria-hidden="true">04</span>
+                    <h3>Make room for sleep</h3>
+                    <p>A regular, relaxing bedtime routine can support good sleep. Try to keep a consistent schedule that works for your life.</p>
+                </article>
+            </div>
+        </section>
+
+        <aside class="disclaimer" aria-label="Health disclaimer">
+            <span class="disclaimer-icon" aria-hidden="true">i</span>
+            <div>
+                <h2>A note about BMI</h2>
+                <p>BMI is a screening measure and not a complete assessment of an individual's health. It does not directly measure body fat or account for every factor, such as age, muscle mass, or individual background. Talk with a qualified healthcare professional for personal guidance.</p>
+            </div>
+        </aside>
+
+        <section class="cta-section">
+            <p class="eyebrow">Ready to get started?</p>
+            <h2>Calculate your BMI</h2>
+            <p>Use the calculator as a starting point for learning about your number.</p>
+            <a class="button button-primary" href="../CalculationPage/index.html">Go to BMI Calculator <span aria-hidden="true">→</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>BMI Guide <span aria-hidden="true">·</span> Information for general educational purposes</p>
+        <a href="../CalculationPage/index.html">BMI Calculator</a>
+    </footer>
+</body>
+</html>
