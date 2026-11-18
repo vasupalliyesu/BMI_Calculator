@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your Body Mass Index with this simple BMI calculator.">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Main navigation">
+      <a class="brand" href="index.html">BMI Calculator</a>
+      <a class="nav-link" href="../InfoPage/info.html">Learn More About BMI</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="calculator-card" aria-labelledby="page-title">
+      <div class="intro">
+        <p class="eyebrow">A quick health check</p>
+        <h1 id="page-title">Calculate your BMI</h1>
+        <p>Enter your height and weight to calculate your Body Mass Index.</p>
+      </div>
+
+      <form id="bmi-form" novalidate>
+        <div class="field">
+          <label for="height">Height <span>(cm)</span></label>
+          <input
+            id="height"
+            name="height"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            placeholder="e.g. 175"
+            aria-describedby="height-error"
+            required
+          >
+          <p class="field-error" id="height-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="weight">Weight <span>(kg)</span></label>
+          <input
+            id="weight"
+            name="weight"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            placeholder="e.g. 70"
+            aria-describedby="weight-error"
+            required
+          >
+          <p class="field-error" id="weight-error"></p>
+        </div>
+
+        <div class="actions">
+          <button class="button button-primary" type="submit">Calculate BMI</button>
+          <button class="button button-secondary" id="reset-button" type="reset">Reset</button>
+        </div>
+      </form>
+
+      <p class="form-error" id="form-error" role="alert"></p>
+
+      <section class="result" id="result" aria-live="polite" aria-atomic="true" hidden>
+        <p class="result-label">Your BMI</p>
+        <p class="bmi-value" id="bmi-value"></p>
+        <h2 id="bmi-category"></h2>
+        <p id="result-message"></p>
+      </section>
+
+      <p class="disclaimer">
+        BMI is a screening measure, not a diagnosis. It does not account for every
+        factor that affects health.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
